@@ -1,11 +1,13 @@
 let angle = 0;
 let intervalo;
 let pausado = false;
+const velocidadeAngular = 45; // graus por segundo
 
 function girarObjeto() {
-    angle += 45; // Aumenta o ângulo em 45 graus
+    angle += velocidadeAngular; // Aumenta o ângulo em 45 graus
     const objeto = document.getElementById('objeto');
     objeto.style.transform = `rotate(${angle}deg)`; // Aplica a rotação
+    document.getElementById('velocidade').textContent = `Velocidade Angular: ${velocidadeAngular}°/s`;
 }
 
 function iniciarRotacao() {
@@ -14,6 +16,7 @@ function iniciarRotacao() {
 
 function pausarRotacao() {
     clearInterval(intervalo); // Para a rotação
+    document.getElementById('velocidade').textContent = `Velocidade Angular: 0°/s`;
 }
 
 document.getElementById('botao').addEventListener('click', function() {

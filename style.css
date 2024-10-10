@@ -1,3 +1,21 @@
+/* Estilo para o corpo da página */
+body {
+    font-family: Arial, sans-serif; 
+    background-color: rgb(34, 3, 172); 
+}
+
+/* Estilo para o topo da página */
+#topo {
+    position: fixed; 
+    top: 10px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    color: white; 
+    display: flex; 
+    flex-direction: column; /* Empilha a informação e os botões */
+    align-items: center; /* Centraliza horizontalmente */
+    
+}
 #objeto {
     width: 100px;
     height: 100px;

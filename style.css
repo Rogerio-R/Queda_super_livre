@@ -1,0 +1,16 @@
+#objeto {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    transition: transform 0.5s;
+}
+
+#botao {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}

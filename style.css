@@ -1,5 +1,6 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -12,4 +13,5 @@ body {
     height: 100px;
     background-color: #3498db;
     transition: transform 0.5s;
+    margin-bottom: 20px;
 }

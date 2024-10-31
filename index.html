@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quadrado Giratório</title>
     <link rel="stylesheet" href="styles.css">
+    <title>Quadrado Giratório</title>
 </head>
 <body>
-
-<div id="quadrado"></div>
-<button id="girarBtn">Girar</button>
-<label id="velocidadeLabel">Velocidade: 1x</label>
-<input type="range" id="velocidadeInput" min="1" max="10" value="1">
-
-<script src="script.js"></script>
+    <div class="container">
+        <div id="square"></div>
+        <div id="speed">Velocidade Angular: <span id="angular-speed">0</span> rad/s</div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

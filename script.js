@@ -1,21 +1,14 @@
-let angulo = 0;
-let velocidade = 1; // Define a velocidade inicial
-let intervalo;
+let angle = 0;
+let angularSpeed = 0.1; // rad/s
+const square = document.getElementById('square');
+const angularSpeedDisplay = document.getElementById('angular-speed');
 
-function girarQuadrado() {
-    angulo += 90; // Aumenta o ângulo em 90 graus
-    document.getElementById('quadrado').style.transform = `rotate(${angulo}deg)`;
+function rotateSquare() {
+    angle += angularSpeed; // Aumenta o ângulo
+    square.style.transform = `rotate(${angle}rad)`;
+    angularSpeedDisplay.textContent = angularSpeed.toFixed(2); // Mostra a velocidade angular
+
+    requestAnimationFrame(rotateSquare); // Chama a função novamente para criar o loop
 }
 
-function ativarRotacao() {
-    clearInterval(intervalo); // Limpa qualquer intervalo anterior
-    intervalo = setInterval(girarQuadrado, 1000 / velocidade);
-}
-
-document.getElementById('girarBtn').addEventListener('click', ativarRotacao);
-
-document.getElementById('velocidadeInput').addEventListener('input', function() {
-    velocidade = this.value;
-    document.getElementById('velocidadeLabel').innerText = `Velocidade: ${velocidade}x`;
-    ativarRotacao(); // Atualiza a rotação com a nova velocidade
-});
+rotateSquare(); // Inicia a rotação

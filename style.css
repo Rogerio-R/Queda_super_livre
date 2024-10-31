@@ -1,6 +1,5 @@
 body {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -8,10 +7,19 @@ body {
     margin: 0;
 }
 
-#quadrado {
+.container {
+    text-align: center;
+}
+
+#square {
     width: 100px;
     height: 100px;
     background-color: #3498db;
-    transition: transform 0.5s;
-    margin-bottom: 20px;
+    margin: 0 auto;
+    transition: transform 0.1s linear;
+}
+
+#speed {
+    margin-top: 20px;
+    font-size: 20px;
 }

@@ -13,8 +13,8 @@ body {
 }
 
 #image-container {
-    width: 3000px; /* Ajuste a largura conforme necessário */
-    height: 3000px; /* Ajuste a altura conforme necessário */
+    width: 10000px; /* Ajuste a largura conforme necessário */
+    height: 10000px; /* Ajuste a altura conforme necessário */
     overflow: hidden;
     position: relative;
     display: flex; /* Para centralizar a imagem */

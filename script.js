@@ -1,14 +1,14 @@
 let angle = 0;
 let angularSpeed = 0.1; // rad/s
-const square = document.getElementById('square');
+const image = document.getElementById('image');
 const angularSpeedDisplay = document.getElementById('angular-speed');
 
-function rotateSquare() {
+function rotateImage() {
     angle += angularSpeed; // Aumenta o ângulo
-    square.style.transform = `rotate(${angle}rad)`;
+    image.style.transform = `translate(-50%, -50%) rotate(${angle}rad)`;
     angularSpeedDisplay.textContent = angularSpeed.toFixed(2); // Mostra a velocidade angular
 
-    requestAnimationFrame(rotateSquare); // Chama a função novamente para criar o loop
+    requestAnimationFrame(rotateImage); // Chama a função novamente para criar o loop
 }
 
-rotateSquare(); // Inicia a rotação
+rotateImage(); // Inicia a rotação

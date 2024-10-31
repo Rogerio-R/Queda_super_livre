@@ -11,12 +11,20 @@ body {
     text-align: center;
 }
 
-#square {
-    width: 100px;
-    height: 100px;
-    background-color: #3498db;
-    margin: 0 auto;
-    transition: transform 0.1s linear;
+#image-container {
+    width: 100px; /* Ajuste a largura conforme necessário */
+    height: 100px; /* Ajuste a altura conforme necessário */
+    overflow: hidden;
+    position: relative;
+}
+
+#image {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #speed {

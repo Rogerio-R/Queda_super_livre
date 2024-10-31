@@ -9,22 +9,26 @@ body {
 
 .container {
     text-align: center;
+    position: relative; /* Para centralizar o conteúdo */
 }
 
 #image-container {
-    width: 100px; /* Ajuste a largura conforme necessário */
-    height: 100px; /* Ajuste a altura conforme necessário */
+    width: 300px; /* Ajuste a largura conforme necessário */
+    height: 300px; /* Ajuste a altura conforme necessário */
     overflow: hidden;
-    position: center;
+    position: relative;
+    display: flex; /* Para centralizar a imagem */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
 }
 
 #image {
-    width: 10000px;
-    height: auto;
-    position: center;
+    width: 100%; /* A imagem ocupa 100% do container */
+    height: auto; /* Mantém a proporção da imagem */
+    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* Centraliza a imagem */
 }
 
 #speed {

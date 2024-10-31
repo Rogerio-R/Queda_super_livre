@@ -1,5 +1,5 @@
 let angle = 0;
-let angularSpeed = 0.7; // rad/s
+let angularSpeed = 0.5; // rad/s
 const image = document.getElementById('image');
 const angularSpeedDisplay = document.getElementById('angular-speed');
 

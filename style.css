@@ -19,9 +19,9 @@ body {
 }
 
 #image {
-    width: 1000px;
+    width: 10000px;
     height: auto;
-    position: absolute;
+    position: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

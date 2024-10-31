@@ -15,7 +15,7 @@ body {
     width: 100px; /* Ajuste a largura conforme necessário */
     height: 100px; /* Ajuste a altura conforme necessário */
     overflow: hidden;
-    position: relative;
+    position: center;
 }
 
 #image {

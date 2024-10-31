@@ -9,14 +9,14 @@ body {
 
 .container {
     text-align: center;
-    position: relative; /* Para centralizar o conteúdo */
+    position: absolute; /* Para centralizar o conteúdo */
 }
 
 #image-container {
     width: 1000000px; /* Ajuste a largura conforme necessário */
     height: 1000000px; /* Ajuste a altura conforme necessário */
     overflow: hidden;
-    position: relative;
+    position: absolute;
     display: flex; /* Para centralizar a imagem */
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center; /* Centraliza verticalmente */

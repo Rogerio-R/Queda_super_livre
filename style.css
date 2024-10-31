@@ -1,25 +1,22 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
+body, html {
+    height: 100%;
     margin: 0;
 }
 
 .container {
-    text-align: center;
-    position: absolute; /* Para centralizar o conteúdo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    height: 100vh; /* Ocupa 100% da altura da tela */
+    background-color: #f0f0f0;
 }
 
 #image-container {
-    width: 1000000px; /* Ajuste a largura conforme necessário */
-    height: 1000000px; /* Ajuste a altura conforme necessário */
+    width: 300px; /* Ajuste conforme necessário */
+    height: 300px; /* Ajuste conforme necessário */
     overflow: hidden;
-    position: absolute;
-    display: flex; /* Para centralizar a imagem */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
+    position: relative;
 }
 
 #image {

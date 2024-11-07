@@ -16,7 +16,7 @@ body, html {
     width: 300px; /* Ajuste conforme necessário */
     height: 300px; /* Ajuste conforme necessário */
     overflow: hidden;
-    position: relative;
+    position: absolute;
     justify-content: center; /* Centraliza verticalmente */
     align-items: center; /* Centraliza horizontalmente */
 }

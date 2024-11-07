@@ -1,37 +1,40 @@
-// Inicializando variáveis
-let angle = 0;
-let angularSpeed = 0.1; // valor inicial da velocidade angular (rad/s)
-
+// Acessando os elementos HTML
 const image = document.getElementById('image');
-const angularSpeedDisplay = document.getElementById('angular-speed');
 const speedInput = document.getElementById('speed-input');
+const speedDisplay = document.getElementById('angular-speed');
+const periodDisplay = document.getElementById('period-value');
+const frequencyDisplay = document.getElementById('frequency-value');
 const setSpeedButton = document.getElementById('set-speed-button');
 
-// Função para aplicar a rotação na imagem
-function rotateImage() {
-    angle += angularSpeed; // Aumenta o ângulo baseado na velocidade angular
-    image.style.transform = `translate(-50%, -50%) rotate(${angle}rad)`; // Aplica a rotação na imagem
+let angularSpeed = parseFloat(speedInput.value); // Velocidade angular inicial (graus por segundo)
+let angle = 0; // Ângulo inicial da imagem
 
-    // Exibe a velocidade angular atual
-    angularSpeedDisplay.textContent = angularSpeed.toFixed(2);
+// Função para atualizar a rotação e calcular os valores de frequência e período
+function updateRotation() {
+    angle += angularSpeed;
+    if (angle >= 360) angle -= 360; // Manter o ângulo entre 0 e 360 graus
+    image.style.transform = `rotate(${angle}deg)`;
 
-    // Cria o loop de animação
-    requestAnimationFrame(rotateImage);
+    // Atualizar os valores de período e frequência
+    let period = 360 / angularSpeed; // Período (tempo para completar uma rotação)
+    let frequency = 1 / period; // Frequência (número de rotações por segundo)
+
+    // Exibir os valores de período e frequência
+    periodDisplay.textContent = period.toFixed(2);
+    frequencyDisplay.textContent = frequency.toFixed(4);
 }
 
-// Função para atualizar a velocidade angular com base na entrada do usuário
-function updateSpeed() {
-    const speed = parseFloat(speedInput.value); // Obtém o valor inserido pelo usuário
-    if (isNaN(speed) || speed <= 0) {
-        alert("Por favor, insira uma velocidade válida.");
-        return;
-    }
-    angularSpeed = speed; // Atualiza a velocidade angular
-    angularSpeedDisplay.textContent = angularSpeed.toFixed(2); // Exibe a nova velocidade
+// Função para definir a nova velocidade angular
+function setNewSpeed() {
+    angularSpeed = parseFloat(speedInput.value);
+    speedDisplay.textContent = angularSpeed.toFixed(2);
 }
 
-// Evento para atualizar a velocidade quando o botão é clicado
-setSpeedButton.addEventListener('click', updateSpeed);
+// Atualizar a rotação a cada 50ms (20 fps)
+setInterval(updateRotation, 50);
 
-// Inicia a rotação da imagem assim que a página carrega
-rotateImage();
+// Evento para mudar a velocidade angular
+setSpeedButton.addEventListener('click', setNewSpeed);
+
+// Iniciar com a rotação configurada
+setNewSpeed();

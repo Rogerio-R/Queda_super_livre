@@ -3,23 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Imagem Giratória</title>
+    <title>Girar Imagem e Calcular Frequência e Período</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o arquivo CSS -->
 </head>
 <body>
-    <div class="container">
-        <div id="image-container">
-            <img id="image" src="gato.jpeg" alt="Imagem Giratória">
-        </div>
-        <div id="controls">
-            <label for="speed-input">Velocidade Angular:</label>
-            <input type="number" id="speed-input" value="0.1" min="0.01" step="0.01">
-            <button id="set-speed-button">Definir Velocidade</button>
-        </div>
-        <div id="speed">
-            Velocidade Angular: <span id="angular-speed">0.10</span> rad/s
-        </div>
+
+<div class="container">
+    <h1>Girar Imagem</h1>
+
+    <!-- Container da imagem -->
+    <div id="image-container">
+        <img id="image" src="gato.jpeg" alt="Imagem de exemplo">
     </div>
-    <script src="script.js"></script>
+
+    <!-- Controles -->
+    <div id="controls">
+        <label for="speed-input">Velocidade Angular (graus por segundo): </label>
+        <input type="number" id="speed-input" value="30" step="1">
+        <button id="set-speed-button">Definir Velocidade</button>
+    </div>
+
+    <!-- Exibição de período e frequência -->
+    <div id="speed">Velocidade Angular: <span id="angular-speed">30</span> graus/s</div>
+    <div id="period">Período: <span id="period-value">12</span> segundos</div>
+    <div id="frequency">Frequência: <span id="frequency-value">0.0833</span> Hz</div>
+</div>
+
+<script src="script.js"></script> <!-- Link para o arquivo JavaScript -->
 </body>
 </html>

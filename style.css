@@ -17,6 +17,8 @@ body, html {
     height: 300px; /* Ajuste conforme necessário */
     overflow: hidden;
     position: relative;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
 }
 
 #image {

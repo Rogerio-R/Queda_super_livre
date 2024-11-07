@@ -1,24 +1,34 @@
+/* Resetando margens e preenchimento */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Estilos gerais */
 html, body {
   height: 100%;
-  margin: 0;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
+  text-align: center; /* Centraliza o texto */
 }
 
 /* Container principal */
 .container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  text-align: center;
   background-color: #fff;
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Para garantir que o container ocupe toda a largura disponível */
+  max-width: 400px; /* Limita a largura do container para que fique mais organizado */
 }
 
 /* Container da imagem */
@@ -44,17 +54,21 @@ html, body {
 /* Controles */
 #controls {
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #speed-input {
   width: 80px;
   padding: 5px;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 #set-speed-button {
   padding: 10px 20px;
-  margin-left: 10px;
+  margin-top: 10px;
   cursor: pointer;
   background-color: #007BFF;
   color: white;

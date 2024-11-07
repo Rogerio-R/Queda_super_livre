@@ -22,7 +22,7 @@ html, body {
 
 /* Container da imagem */
 #image-container {
-  width: 300px; /* Ajuste conforme necessário */
+  width: 300px;  /* Ajuste conforme necessário */
   height: 300px; /* Ajuste conforme necessário */
   display: flex;
   justify-content: center;
@@ -35,9 +35,11 @@ html, body {
 /* Estilo da imagem */
 #image {
   width: 100%; /* A imagem ocupa 100% do container */
-  height: auto; /* Mantém a proporção da imagem */
+  height: 100%; /* A altura é ajustada para preencher o container */
   object-fit: cover; /* Garante que a imagem cubra toda a área do container */
   transition: transform 0.1s linear; /* Transição suave para animação */
+  display: block; /* Garantir que a imagem seja tratada como um bloco */
+  object-position: center; /* Centraliza a imagem dentro do container */
 }
 
 /* Controles abaixo da imagem */

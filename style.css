@@ -1,34 +1,15 @@
 body, html {
     height: 100%;
     margin: 0;
-  }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centraliza verticalmente */
-    align-items: center; /* Centraliza horizontalmente */
-    height: 100vh; /* Ocupa 100% da altura da tela */
-    background-color: #f0f0f0;
-  }
-  
-  #image-container {
-    width: 300px; /* Ajuste conforme necessário */
-    height: 300px; /* Ajuste conforme necessário */
-    display: flex; /* Ativa o modelo Flexbox */
-    justify-content: center; /* Centraliza a imagem horizontalmente */
-    align-items: center; /* Centraliza a imagem verticalmente */
-    overflow: hidden;
+    position: relative; /* Permite que o posicionamento absoluto funcione corretamente */
   }
   
   #image {
-    width: 100%; /* A imagem ocupa 100% do container */
+    width: 300px; /* Ajuste conforme necessário */
     height: auto; /* Mantém a proporção da imagem */
-    object-fit: cover; /* Garante que a imagem cubra toda a área do container */
-  }
-  
-  #speed {
-    margin-top: 20px;
-    font-size: 20px;
+    position: absolute;
+    top: 50%; /* Posiciona no meio da tela verticalmente */
+    left: 50%; /* Posiciona no meio da tela horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta para centralizar a imagem exatamente */
   }
   

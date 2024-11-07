@@ -1,15 +1,72 @@
-body, html {
-    height: 100%;
-    margin: 0;
-    position: relative; /* Permite que o posicionamento absoluto funcione corretamente */
-  }
-  
-  #image {
-    width: 300px; /* Ajuste conforme necessário */
-    height: auto; /* Mantém a proporção da imagem */
-    position: absolute;
-    top: 50%; /* Posiciona no meio da tela verticalmente */
-    left: 50%; /* Posiciona no meio da tela horizontalmente */
-    transform: translate(-50%, -50%); /* Ajusta para centralizar a imagem exatamente */
-  }
-  
+/* Estilos gerais para a página */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Container centralizado */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Container da imagem */
+#image-container {
+  width: 300px; /* Ajuste conforme necessário */
+  height: 300px; /* Ajuste conforme necessário */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* Estilo da imagem */
+#image {
+  width: 100%; /* A imagem ocupa 100% do container */
+  height: auto; /* Mantém a proporção da imagem */
+  object-fit: cover; /* Garante que a imagem cubra toda a área do container */
+  transition: transform 0.1s linear; /* Transição suave para animação */
+}
+
+/* Controles abaixo da imagem */
+#controls {
+  margin-top: 20px;
+}
+
+#speed-input {
+  width: 80px;
+  padding: 5px;
+  text-align: center;
+}
+
+#set-speed-button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+#set-speed-button:hover {
+  background-color: #0056b3;
+}
+
+/* Exibição da velocidade atual */
+#speed {
+  margin-top: 20px;
+  font-size: 20px;
+}
